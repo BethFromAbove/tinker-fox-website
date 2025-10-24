@@ -1,0 +1,183 @@
+.header {
+    /*background: url("../imgs/oil.jpg") center center;*/
+    background: url("../imgs/circuit-close-up2.jpg") center center / cover no-repeat;
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+    height: 20rem;
+
+}
+
+#name {
+	color: aquamarine;
+}
+
+.card-img-top {
+	height: 17rem;
+    object-fit: cover;
+}
+
+.content-text {
+	height: 100%;
+}
+
+.game-text {
+	padding-top: 1rem;
+}
+
+a {
+	color: #268594;
+}
+
+a:hover {
+	color: #002b36;
+}
+
+body {
+	background: #f8f9fa;
+}
+
+footer {
+	background: white;
+	padding: 3rem 0 2rem;
+
+}
+
+.unordered {
+	list-style-type: none;
+}
+
+.content {
+	font-size: 1.1rem;
+}
+
+.email {
+	color: #acb3b9;
+    padding: 0 3px;
+}
+
+.instructables-button {
+	padding: 3rem;
+}
+
+.end-of-p {
+	margin-bottom: 2rem;
+}
+
+.container .card .card-body {
+	padding: 1.25rem 2.5rem;
+}
+
+
+
+h1 {
+	display: flex;
+	height: 100%;
+	width: 100%;
+    justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	padding: 0 0 2rem 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #f9f9f9;
+}
+
+.navbar-dark .navbar-nav .chosen .nav-link {
+    color: aquamarine;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoGitHub:hover {
+  background-color: #000;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoInstagram:hover {
+  background-color: #E1306C;
+}
+
+.social-network a.icoInstructables:hover {
+  background-color: #fabe17;
+}
+
+.social-network a.icoGitHub:hover i,
+.social-network a.icoInstagram:hover i,
+.social-network a.icoInstructables:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
