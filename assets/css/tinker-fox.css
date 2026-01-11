@@ -1,183 +1,178 @@
-.header {
-    /*background: url("../imgs/oil.jpg") center center;*/
-    background: url("../imgs/circuit-close-up2.jpg") center center / cover no-repeat;
-    color: white;
-    text-shadow: 1px 1px 3px #000;
-    height: 20rem;
+/* ======================================================
+   Tinkerfox – Custom Styles
+   Primary: Orange
+   Accent: Teal
+   ====================================================== */
 
+/* ---------- CSS Variables ---------- */
+:root {
+  --tf-orange: #f28c28;
+  --tf-orange-dark: #d97706;
+  --tf-teal: #1fa4a9;
+  --tf-teal-dark: #158489;
+
+  --tf-text-dark: #1f2933;
+  --tf-text-muted: #6b7280;
+  --tf-bg-light: #f9fafb;
 }
 
-#name {
-	color: aquamarine;
-}
-
-.card-img-top {
-	height: 17rem;
-    object-fit: cover;
-}
-
-.content-text {
-	height: 100%;
-}
-
-.game-text {
-	padding-top: 1rem;
-}
-
-a {
-	color: #268594;
-}
-
-a:hover {
-	color: #002b36;
-}
-
+/* ---------- Base Typography ---------- */
 body {
-	background: #f8f9fa;
+  color: var(--tf-text-dark);
+  line-height: 1.6;
 }
 
-footer {
-	background: white;
-	padding: 3rem 0 2rem;
-
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em;
 }
 
-.unordered {
-	list-style-type: none;
+.lead {
+  color: var(--tf-text-muted);
 }
 
-.content {
-	font-size: 1.1rem;
+/* ---------- Navbar ---------- */
+.navbar-brand {
+  color: var(--tf-orange);
 }
 
-.email {
-	color: #acb3b9;
-    padding: 0 3px;
+.navbar-brand:hover {
+  color: var(--tf-orange-dark);
 }
 
-.instructables-button {
-	padding: 3rem;
+.nav-link {
+  font-weight: 500;
 }
 
-.end-of-p {
-	margin-bottom: 2rem;
+.nav-link:hover {
+  color: var(--tf-teal);
 }
 
-.container .card .card-body {
-	padding: 1.25rem 2.5rem;
+/* ---------- Navbar Logo ---------- */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--tf-orange);
+  line-height: 1;
+}
+
+.navbar-brand img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.navbar-brand span {
+  font-weight: 700;
+  font-size: 32px; /* Match SVG height -4 */
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 32px;
+  }
+
+  .navbar-brand span {
+    font-size: 32px;
+  }
 }
 
 
-
-h1 {
-	display: flex;
-	height: 100%;
-	width: 100%;
-    justify-content: center;
-	align-items: center;
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background-color: var(--tf-orange);
+  border-color: var(--tf-orange);
 }
 
-h2 {
-	padding: 0 0 2rem 0;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--tf-orange-dark);
+  border-color: var(--tf-orange-dark);
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #f9f9f9;
+.btn-outline-primary {
+  color: var(--tf-teal);
+  border-color: var(--tf-teal);
 }
 
-.navbar-dark .navbar-nav .chosen .nav-link {
-    color: aquamarine;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* footer social icons */
-
-ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left: 0 !important;
-  padding: 0;
-}
-
-ul.social-network li {
-  display: inline;
-  margin: 0 5px;
-}
-
-.social-network a.icoFacebook:hover {
-  background-color: #3B5998;
-}
-
-.social-network a.icoGitHub:hover {
-  background-color: #000;
-}
-
-.social-network a.icoLinkedin:hover {
-  background-color: #007bb7;
-}
-
-.social-network a.icoInstagram:hover {
-  background-color: #E1306C;
-}
-
-.social-network a.icoInstructables:hover {
-  background-color: #fabe17;
-}
-
-.social-network a.icoGitHub:hover i,
-.social-network a.icoInstagram:hover i,
-.social-network a.icoInstructables:hover i,
-.social-network a.icoLinkedin:hover i {
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--tf-teal);
+  border-color: var(--tf-teal);
   color: #fff;
 }
 
-.social-network a.socialIcon:hover,
-.socialHoverClass {
-  color: #44BCDD;
+/* ---------- Links ---------- */
+a {
+  color: var(--tf-teal);
+  text-decoration: none;
 }
 
-.social-circle li a {
-  display: inline-block;
-  position: relative;
-  margin: 0 auto 0 auto;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
+a:hover {
+  color: var(--tf-teal-dark);
+  text-decoration: underline;
 }
 
-.social-circle li i {
-  margin: 0;
-  line-height: 50px;
-  text-align: center;
+/* ---------- Sections ---------- */
+section {
+  scroll-margin-top: 80px;
 }
 
-
-.social-circle i {
-  color: #595959;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  transition: all 0.8s;
+.bg-light {
+  background-color: var(--tf-bg-light) !important;
 }
 
-.social-network a {
-  background-color: #F9F9F9;
+/* ---------- Cards ---------- */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-img-top {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* ---------- Lists ---------- */
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Images ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  color: var(--tf-text-muted);
+}
+
+footer a {
+  color: var(--tf-teal);
+}
+
+footer a:hover {
+  color: var(--tf-teal-dark);
+}
+
+/* ---------- Utility ---------- */
+.shadow-sm {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.rounded {
+  border-radius: 0.75rem !important;
 }
