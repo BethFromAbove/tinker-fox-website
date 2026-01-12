@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
 
 .navbar-brand span {
   font-weight: 700;
-  font-size: 32px; /* Match SVG height -4 */
+  font-size: 28px; /* Match SVG height -8 */
   line-height: 1;
   display: flex;
   align-items: center;
@@ -175,4 +175,9 @@ footer a:hover {
 
 .rounded {
   border-radius: 0.75rem !important;
+}
+
+.border-dashed {
+  border: 2px dashed #d1d5db !important;
+  background-color: #fafafa;
 }
