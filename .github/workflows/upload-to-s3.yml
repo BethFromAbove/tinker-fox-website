@@ -24,7 +24,7 @@ jobs:
       - name: Upload root HTML files
         run: |
           for file in *.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
@@ -33,7 +33,7 @@ jobs:
       - name: Upload about HTML files
         run: |
           for file in about/*.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/about/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/about/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
@@ -42,7 +42,7 @@ jobs:
       - name: Upload learn-to-solder HTML files
         run: |
           for file in learn-to-solder/*.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/learn-to-solder/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/learn-to-solder/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
@@ -51,7 +51,7 @@ jobs:
       - name: Upload products HTML files
         run: |
           for file in products/*.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
@@ -60,7 +60,7 @@ jobs:
       - name: Upload products/hot-air-balloon-soldering-kit HTML files
         run: |
           for file in products/hot-air-balloon-soldering-kit/*.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/hot-air-balloon-soldering-kit/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/hot-air-balloon-soldering-kit/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
@@ -69,7 +69,7 @@ jobs:
       - name: Upload support HTML files
         run: |
           for file in support/*.html; do
-            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/support/$(basename "${file%.html}")" \
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/support/$(basename "${file}")" \
               --content-type text/html \
               --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
               --acl public-read
