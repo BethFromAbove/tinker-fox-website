@@ -1,0 +1,83 @@
+name: Upload to S3
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Upload root HTML files
+        run: |
+          for file in *.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload about HTML files
+        run: |
+          for file in about/*.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/about/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload learn-to-solder HTML files
+        run: |
+          for file in learn-to-solder/*.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/learn-to-solder/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload products HTML files
+        run: |
+          for file in products/*.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload products/hot-air-balloon-soldering-kit HTML files
+        run: |
+          for file in products/hot-air-balloon-soldering-kit/*.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/products/hot-air-balloon-soldering-kit/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload support HTML files
+        run: |
+          for file in support/*.html; do
+            aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/support/$(basename "${file%.html}")" \
+              --content-type text/html \
+              --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+              --acl public-read
+          done
+
+      - name: Upload assets directory
+        run: |
+          aws s3 cp assets/ "s3://${{ secrets.S3_BUCKET }}/assets/" \
+            --recursive \
+            --cache-control "max-age=0, no-cache, no-store, must-revalidate" \
+            --acl public-read
